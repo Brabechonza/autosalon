@@ -1,170 +1,165 @@
-/* Obecné styly pro celé stránky */
-body {
-    font-family: 'Arial', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* Hlavní stránka */
 header {
-    background-color: #2d3b55; /* tmavě modrá */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 1rem 2rem;
 }
 
-header .logo h1 a {
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header a {
+    color: white;
+    font-size: 24px;
     text-decoration: none;
-    color: #fff;
-    font-size: 2.5em;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-header .logo h1 a:hover {
-    color: #f39c12; /* oranžová při hoveru */
-}
-
-/* Navigace pro všechny stránky */
 nav ul {
+    display: flex;
     list-style: none;
-    padding: 0;
-    margin: 10px 0;
-    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: #f4f4f9;
+    color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #f39c12;
+    color: #f1c40f;
 }
 
-/* Sekce hlavní stránky */
+main {
+    padding: 2rem;
+}
+
 .hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
-
-.hero-text {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-text h2 {
-    font-size: 3.5em;
-    margin: 0;
-    padding-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.hero-text p {
-    font-size: 1.5em;
-    margin-top: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Sekce pro auta (detail auta) */
-#car-detail {
-    padding: 50px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    text-align: left;
-}
-
-.car-detail-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: flex-start;
-}
-
-/* Styl pro obrázek auta */
-.car-image-container {
-    flex: 1 1 400px;
-    max-width: 500px;
+    background-color: #f1c40f;
+    padding: 2rem;
     text-align: center;
 }
 
-.car-image {
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #333;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.product-item {
+    text-align: center;
+    width: 30%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.product-item img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Styl pro informace o autě */
-.car-info {
-    flex: 1 1 400px;
-    max-width: 600px;
-}
-
-.car-info h2 {
-    font-size: 2.5em;
-    color: #2d3b55;
-    margin-bottom: 15px;
-}
-
-.car-info p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-.car-info strong {
-    color: #f39c12;
-}
-
-/* Sekce pro galerie a detaily (pokud potřebuješ přidat více informací) */
-.car-gallery {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.car-gallery img {
-    width: 30%;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    object-fit: cover;
 }
 
-/* Footer */
+.product-item h3 {
+    margin-top: 10px;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 6rem; /* Zvýšený margin pro větší mezery */
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+}
+
+.cta a {
+    background-color: #f1c40f;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block; /* Zajistí, že tlačítka budou pod sebou */
+    margin-top: 10px; /* Přidání mezery mezi tlačítky */
+}
+
 footer {
-    background-color: #2d3b55;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 1em;
+    padding: 1rem;
+    margin-top: 3rem;
 }
 
-footer p {
-    margin: 0;
+/* Zmenšení obrázků u Škody a Audi */
+.product-details img {
+    width: 80%;  /* Zmenšíme šířku obrázků na 80% */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;  /* Přidáme malou mezeru pod obrázek */
+}
+
+/* Specifické nastavení pro obrázek Audi */
+.product-details img[src="images/audi_s3.jpg"] {
+    width: 40%; /* Zmenšíme obrázek Audi ještě víc, na 70% */
+}
+
+/* Specifické nastavení pro obrázek Škody */
+.product-details img[src="images/skoda_octavia_rs.jpg"] {
+    width: 40%; /* Zmenšíme obrázek Škody na 70% */
+}
+
+/* Specifické nastavení pro obrázek Škody */
+.product-details img[src="images/bmw_m5_competition.jpg"] {
+    width: 30%; /* Zmenšíme obrázek Škody na 70% */
 }
