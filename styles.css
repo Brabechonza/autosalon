@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+}
+
+main {
+    padding: 2rem;
+}
+
+.hero {
+    background-color: #f1c40f;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #333;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.product-item {
+    text-align: center;
+    width: 30%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    margin-top: 10px;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 6rem; /* Zvýšený margin pro větší mezery */
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+}
+
+.cta a {
+    background-color: #f1c40f;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block; /* Zajistí, že tlačítka budou pod sebou */
+    margin-top: 10px; /* Přidání mezery mezi tlačítky */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* Zmenšení obrázků u Škody a Audi */
+.product-details img {
+    width: 80%;  /* Zmenšíme šířku obrázků na 80% */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;  /* Přidáme malou mezeru pod obrázek */
+}
+
+/* Specifické nastavení pro obrázek Audi */
+.product-details img[src="images/audi_s3.jpg"] {
+    width: 40%; /* Zmenšíme obrázek Audi ještě víc, na 70% */
+}
+
+/* Specifické nastavení pro obrázek Škody */
+.product-details img[src="images/skoda_octavia_rs.jpg"] {
+    width: 40%; /* Zmenšíme obrázek Škody na 70% */
+}
+
+/* Specifické nastavení pro obrázek Škody */
+.product-details img[src="images/bmw_m5_competition.jpg"] {
+    width: 30%; /* Zmenšíme obrázek Škody na 70% */
+}
